@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    background-color: #520606;
+    padding: 20px;
+    height: 5vh;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 15px;
+}
+
+.content {
+    padding: 20px;
+}
