@@ -16,15 +16,11 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 pasta_aula = os.path.abspath(os.path.dirname(__file__))
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(pasta_aula, "produto.db")
-# TODO ALUNO: configure a URI do SQLite (arquivo loja.db nesta pasta)
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(pasta_aula, "___________")
+
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
-
-# TODO ALUNO: crie o objeto db
-# db = SQLAlchemy(app)
 
 
 # --- MODEL: tabela produtos (COMPLETE A CLASSE) ---
@@ -87,8 +83,7 @@ def index():
     produtos = Produto.query.order_by(Produto.nome).all()
     # TODO ALUNO: busque todos os produtos ordenados por nome
     # produtos = Produto.query.order_by(Produto.nome).all()
-    produtos = []
-    return render_template("lista.html", produtos=produtos)
+    return render_template("lista.html", produto=produtos)
 
 
 # --- CREATE ---
